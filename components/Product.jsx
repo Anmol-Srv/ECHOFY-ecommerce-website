@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { urlFor } from '../lib/client'
 
-const Product = ({product:{image,name,slug,price}}) => { //take the entire product as parameter and then extract each value as individual parameters to use
+const Product = ({ product: { image, name, slug, price } }) => { //take the entire product as parameter and then extract each value as individual parameters to use
   return (
     <div>
       <Link href={`/product/${slug.current}`}>
