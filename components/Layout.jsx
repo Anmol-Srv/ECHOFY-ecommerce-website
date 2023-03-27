@@ -6,7 +6,6 @@ import Footer from './Footer'
 const Layout = ({ children }) => {
   return (
     <div className='layout'>
-        <div className='bg'>
       <Head>  
         <title>ECHOFY Online</title>
       </Head>
@@ -21,7 +20,6 @@ const Layout = ({ children }) => {
         <Footer />
       </footer>
       </div>
-    </div>
   )
 }
 
