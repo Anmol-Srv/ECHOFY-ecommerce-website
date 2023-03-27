@@ -12,7 +12,7 @@ const Navbar = () => {
 
       <p className='logo'>
         <Link href="/">
-          MERNkart Headphones
+          ECHOFY
         </Link>
       </p>
 
@@ -24,7 +24,6 @@ const Navbar = () => {
       </button>
 
       {showCart && <Cart />}
-      {/* <Cart/> */}
 
     </div>
   )

@@ -1,11 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
 import { urlFor } from '../lib/client'
+import VanillaTilt from 'vanilla-tilt';
+import { useEffect } from 'react';
 
 
-const HeroBanner = ({ heroBanner }) => {
+const HeroBanner = ({ heroBanner , pr}) => {
+  useEffect(() => {
+    VanillaTilt.init(document.querySelectorAll('.tilt'), {
+      max: 25,
+      speed: 400,
+      glare: false,
+    });
+  }, []);
   return (
-    <div className='hero-banner-container'>
+    <div className='hero-banner-container '>
       <div>
         <p className='beats-solo'>
           {heroBanner.smallText}
@@ -17,7 +26,7 @@ const HeroBanner = ({ heroBanner }) => {
         <img src={urlFor(heroBanner.image)} alt="headphones" className='hero-banner-image' />
       </div>
       <div>
-        <Link href={`/products/${heroBanner.product}`}>
+        <Link href={`/product/${pr[0].slug.current}`}>
           <button type='button'>{heroBanner.buttonText}</button>
         </Link>
         <div className='desc'>
@@ -26,6 +35,8 @@ const HeroBanner = ({ heroBanner }) => {
         </div>
       </div>
     </div>
+
+
   )
 }
 

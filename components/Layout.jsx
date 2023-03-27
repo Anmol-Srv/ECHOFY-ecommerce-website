@@ -6,18 +6,21 @@ import Footer from './Footer'
 const Layout = ({ children }) => {
   return (
     <div className='layout'>
-      <Head>
+        <div className='bg'>
+      <Head>  
         <title>MERNkart Online</title>
       </Head>
       <header>
         <Navbar />
       </header>
+
       <main className='main-container'>
         {children}
       </main>
       <footer>
         <Footer />
       </footer>
+      </div>
     </div>
   )
 }
